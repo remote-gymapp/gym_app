@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -75,7 +77,7 @@ class SignInPage extends GetView {
                             fontSize: 22.0,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed('/loading_screen'),
                       ),
                     )
                   ],

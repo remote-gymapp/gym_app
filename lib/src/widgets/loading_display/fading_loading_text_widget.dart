@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Loading text that repeatedly fades in and out
 class FadingLoadingText extends StatefulWidget {
   const FadingLoadingText({Key? key}) : super(key: key);
 
@@ -9,6 +10,7 @@ class FadingLoadingText extends StatefulWidget {
 
 class _FadingLoadingTextState extends State<FadingLoadingText>
     with TickerProviderStateMixin {
+  /// Controller that changes opacity value for text
   late final AnimationController _animationController;
 
   @override
