@@ -69,6 +69,7 @@ class SignInPage extends GetView {
                     color: Colors.white,
                   ),
                   labelText: 'E-mail',
+                  isPasswordField: false,
                 ),
                 SizedBox(
                   height: 15,
@@ -79,6 +80,15 @@ class SignInPage extends GetView {
                     color: Colors.white,
                   ),
                   labelText: 'Password',
+                  isPasswordField: true,
+                  suffixIcon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.visibility,
+                      color: Colors.white,
+                    ),
+                    splashRadius: 1,
+                  ),
                 ),
               ],
             ),

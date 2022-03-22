@@ -7,16 +7,18 @@ class CustomTextFormField extends StatelessWidget {
 
   TextEditingController? textEditingController;
   String? Function(String?)? validator;
+  final Color focusedBorderColor = Color(0XFF3772FF);
 
   Widget? suffixIcon;
   Function(String)? onChanged;
-  bool? isPasswordField;
-  bool? isObscureText;
+  bool isPasswordField;
   Color fillColor = Color(0XFF1C2939);
 
   CustomTextFormField({
     required this.labelText,
     required this.prefixIcon,
+    required this.isPasswordField,
+    this.suffixIcon,
     Key? key,
   }) : super(key: key);
 
@@ -27,7 +29,19 @@ class CustomTextFormField extends StatelessWidget {
       child: TextFormField(
         validator: validator,
         controller: textEditingController,
+        style: TextStyle(
+          color: Colors.white,
+        ),
         decoration: InputDecoration(
+          hintStyle: TextStyle(
+            color: Colors.red,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: focusedBorderColor,
+              width: 1,
+            ),
+          ),
           labelText: labelText,
           labelStyle: TextStyle(
             fontSize: 21.0,
@@ -41,7 +55,9 @@ class CustomTextFormField extends StatelessWidget {
             borderSide: BorderSide.none,
           ),
           prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
         ),
+        obscureText: isPasswordField,
       ),
     );
   }
