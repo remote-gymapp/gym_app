@@ -20,7 +20,7 @@ class CustomButtonWidget extends StatelessWidget {
       child: childWidget,
       style: ElevatedButton.styleFrom(
         primary: color,
-        fixedSize: Size(Get.size.width * 0.85, Get.size.height * 0.07),
+        fixedSize: Size(Get.size.width * 0.85, 55),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4.0),
         ),
