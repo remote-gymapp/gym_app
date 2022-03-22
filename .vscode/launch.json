@@ -1,16 +1,16 @@
 {
     "configurations": [
         {
-          "name": "Flutter Run Release",
-          "request": "launch",
-          "type": "dart",
-          "flutterMode": "release"
-        },
-        {
           "name": "Flutter Run Debug",
           "request": "launch",
           "type": "dart",
           "flutterMode": "debug"
+        },
+        {
+          "name": "Flutter Run Release",
+          "request": "launch",
+          "type": "dart",
+          "flutterMode": "release"
         },
         {
           "name": "Flutter Run Profile",
