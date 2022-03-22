@@ -3,8 +3,9 @@ import 'package:get/get.dart';
 
 class CustomButtonWidget extends StatelessWidget {
   Widget childWidget;
-  Function() onPressed;
   Color? color = Color(0XFF3772FF);
+
+  Function() onPressed;
 
   CustomButtonWidget({
     Key? key,
@@ -16,7 +17,9 @@ class CustomButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        onPressed();
+      },
       child: childWidget,
       style: ElevatedButton.styleFrom(
         primary: color,

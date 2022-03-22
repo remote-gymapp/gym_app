@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+
 import 'package:gym_app/src/pages/auth/widgets/sign_in_page.dart';
 
 class GymApp extends StatelessWidget {
