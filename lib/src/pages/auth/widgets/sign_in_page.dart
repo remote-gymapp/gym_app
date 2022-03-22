@@ -5,7 +5,10 @@ import 'package:gym_app/src/pages/auth/widgets/common/custom_button_widget.dart'
 import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_widget.dart';
 
 class SignInPage extends GetView {
-  Color backgroundColor = Color(0Xff0C1727);
+  final Color backgroundColor = Color(0Xff0C1727);
+
+  SignInPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
