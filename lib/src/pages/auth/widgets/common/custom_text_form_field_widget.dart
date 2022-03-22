@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomTextFormField extends StatelessWidget {
   String labelText;
@@ -22,7 +23,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 340,
+      width: Get.size.width * 0.85,
       child: TextFormField(
         validator: validator,
         controller: textEditingController,
