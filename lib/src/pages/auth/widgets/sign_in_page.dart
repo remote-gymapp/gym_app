@@ -6,6 +6,7 @@ import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_wid
 
 class SignInPage extends GetView {
   final Color backgroundColor = Color(0Xff0C1727);
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   SignInPage({Key? key}) : super(key: key);
 
@@ -55,57 +56,60 @@ class SignInPage extends GetView {
   Flexible _buildSignInFormArea() {
     return Flexible(
       flex: 2,
-      child: Flex(
-        direction: Axis.vertical,
-        children: [
-          Flexible(
-            flex: 3,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                CustomTextFormField(
-                  prefixIcon: Icon(
-                    Icons.alternate_email,
-                    color: Colors.white,
-                  ),
-                  labelText: 'E-mail',
-                  isPasswordField: false,
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                CustomTextFormField(
-                  prefixIcon: Icon(
-                    Icons.vpn_key_sharp,
-                    color: Colors.white,
-                  ),
-                  labelText: 'Password',
-                  isPasswordField: true,
-                  suffixIcon: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.visibility,
+      child: Form(
+        key: _formKey,
+        child: Flex(
+          direction: Axis.vertical,
+          children: [
+            Flexible(
+              flex: 3,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  CustomTextFormField(
+                    prefixIcon: Icon(
+                      Icons.alternate_email,
                       color: Colors.white,
                     ),
-                    splashRadius: 1,
+                    labelText: 'E-mail',
+                    isPasswordField: false,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CustomTextFormField(
+                    prefixIcon: Icon(
+                      Icons.vpn_key_sharp,
+                      color: Colors.white,
+                    ),
+                    labelText: 'Password',
+                    isPasswordField: true,
+                    suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.visibility,
+                        color: Colors.white,
+                      ),
+                      splashRadius: 1,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              child: CustomButtonWidget(
+                childWidget: Text(
+                  'Login',
+                  style: TextStyle(
+                    fontSize: 22.0,
                   ),
                 ),
-              ],
-            ),
-          ),
-          Flexible(
-            flex: 1,
-            child: CustomButtonWidget(
-              childWidget: Text(
-                'Login',
-                style: TextStyle(
-                  fontSize: 22.0,
-                ),
+                onPressed: () {},
               ),
-              onPressed: () {},
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
