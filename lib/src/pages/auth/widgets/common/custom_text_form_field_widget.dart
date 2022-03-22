@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
   String labelText;
+  Widget? prefixIcon;
+
   TextEditingController? textEditingController;
   String? Function(String?)? validator;
-  Widget? prefixIcon;
+
   Widget? suffixIcon;
   Function(String)? onChanged;
   bool? isPasswordField;
