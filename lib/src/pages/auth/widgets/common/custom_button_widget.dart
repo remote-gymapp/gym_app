@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gym_app/src/theme/app_theme.dart';
 
 class CustomButtonWidget extends StatelessWidget {
   Widget childWidget;
-  Color? color = Color(0XFF3772FF);
+  Color? color = AppTheme.primaryMember;
 
   Function() onPressed;
 
