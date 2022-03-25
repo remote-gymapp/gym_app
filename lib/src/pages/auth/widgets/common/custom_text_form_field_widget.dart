@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gym_app/src/theme/app_theme.dart';
 
 class CustomTextFormField extends StatelessWidget {
   String labelText;
@@ -7,12 +8,12 @@ class CustomTextFormField extends StatelessWidget {
 
   TextEditingController? textEditingController;
   String? Function(String?)? validator;
-  final Color focusedBorderColor = Color(0XFF3772FF);
+  final Color focusedBorderColor = AppTheme.primaryMember;
 
   Widget? suffixIcon;
   Function(String)? onChanged;
   bool isPasswordField;
-  Color fillColor = Color(0XFF1C2939);
+  Color fillColor = AppTheme.lightBg;
 
   CustomTextFormField({
     required this.labelText,
@@ -29,9 +30,6 @@ class CustomTextFormField extends StatelessWidget {
       child: TextFormField(
         validator: validator,
         controller: textEditingController,
-        style: TextStyle(
-          color: Colors.white,
-        ),
         decoration: InputDecoration(
           hintStyle: TextStyle(
             color: Colors.red,
@@ -45,7 +43,6 @@ class CustomTextFormField extends StatelessWidget {
           labelText: labelText,
           labelStyle: TextStyle(
             fontSize: 21.0,
-            color: Colors.white,
             fontWeight: FontWeight.normal,
           ),
           filled: true,
