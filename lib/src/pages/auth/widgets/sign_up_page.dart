@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:gym_app/src/pages/auth/widgets/common/custom_button_widget.dart';
 import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_widget.dart';
+import 'package:gym_app/src/theme/app_theme.dart';
 
 class SignUpPage extends GetView {
   final Color backgroundColor = Color(0Xff0C1727);
@@ -15,7 +16,7 @@ class SignUpPage extends GetView {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: backgroundColor,
+        backgroundColor: AppTheme.darkBg,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
