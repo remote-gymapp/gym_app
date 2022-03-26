@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:gym_app/src/pages/auth/widgets/common/custom_button_widget.dart';
 import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_widget.dart';
+import 'package:gym_app/src/pages/screen_route.dart';
 import 'package:gym_app/src/theme/app_theme.dart';
 import 'package:gym_app/src/pages/screen_route.dart';
 
@@ -15,6 +16,7 @@ class SignInPage extends GetView {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppTheme.darkBg,
         body: Center(
           child: Column(
@@ -67,7 +69,6 @@ class SignInPage extends GetView {
                     color: AppTheme.primaryText,
                   ),
                   labelText: 'E-mail',
-                  isPasswordField: false,
                 ),
                 SizedBox(
                   height: 15,
@@ -117,7 +118,9 @@ class SignInPage extends GetView {
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(ScreenRoute.signUpPage);
+          },
           child: Text(
             'Sign Up',
             style: TextStyle(
