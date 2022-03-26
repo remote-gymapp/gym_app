@@ -14,5 +14,8 @@ class AppTheme {
     primaryTextTheme: Typography().white,
     hintColor: primaryText,
     textTheme: Typography().white,
+    drawerTheme: DrawerThemeData(
+      backgroundColor: lightBg
+    ),
   );
 }
