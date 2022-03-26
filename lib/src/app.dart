@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-
+import 'package:gym_app/src/app_routes.dart';
 import 'package:gym_app/src/pages/auth/widgets/sign_in_page.dart';
+
 import 'package:gym_app/src/theme/app_theme.dart';
 
 class GymApp extends StatelessWidget {
@@ -12,6 +13,7 @@ class GymApp extends StatelessWidget {
     return GetMaterialApp(
       theme: AppTheme.themeData,
       debugShowCheckedModeBanner: false,
+      getPages: AppRoute.appRoutes,
       home: SignInPage(),
     );
   }
