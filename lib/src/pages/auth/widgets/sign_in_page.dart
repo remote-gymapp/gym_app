@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:gym_app/src/pages/auth/widgets/common/custom_button_widget.dart';
 import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_widget.dart';
+import 'package:gym_app/src/pages/screen_route.dart';
 import 'package:gym_app/src/theme/app_theme.dart';
 
 class SignInPage extends GetView {
@@ -114,7 +115,9 @@ class SignInPage extends GetView {
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(ScreenRoute.signUpPage);
+          },
           child: Text(
             'Sign Up',
             style: TextStyle(

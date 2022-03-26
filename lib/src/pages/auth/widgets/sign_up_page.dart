@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:gym_app/src/pages/auth/widgets/common/custom_button_widget.dart';
 import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_widget.dart';
+import 'package:gym_app/src/pages/screen_route.dart';
 import 'package:gym_app/src/theme/app_theme.dart';
 
 class SignUpPage extends GetView {
@@ -131,7 +132,9 @@ class SignUpPage extends GetView {
 
   Widget _buildSignUpTextNavigationArea() {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        Get.toNamed(ScreenRoute.signInPage);
+      },
       child: Text(
         'I already have an account',
         style: TextStyle(
