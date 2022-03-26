@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
 
 import 'package:gym_app/src/pages/auth/widgets/sign_in_page.dart';
 import 'package:gym_app/src/pages/screen_route.dart';
@@ -12,7 +11,7 @@ class AppRoute {
       page: () => SignInPage(),
     ),
     GetPage(
-      name: ScreenRoute.demoMain,
+      name: ScreenRoute.main,
       page: () => Layout(),
     ),
   ];

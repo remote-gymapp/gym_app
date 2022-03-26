@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:gym_app/src/theme/app_theme.dart';
 import 'package:gym_app/src/controllers/layout_controller.dart';
+import 'package:gym_app/src/widgets/layout/custom_drawer.dart';
 
 class Layout extends GetView<LayoutController> {
   @override
@@ -13,22 +14,19 @@ class Layout extends GetView<LayoutController> {
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () {
-        return Scaffold(
-          appBar: controller.isAppBarEnabled.value ? _buildAppBar() : null,
-          body: Container(
-            color: AppTheme.darkBg,
-            child: Center(
-              child: controller.currentPage,
-            ),
+      () => Scaffold(
+        appBar: controller.isAppBarEnabled.value ? _buildAppBar() : null,
+        body: Container(
+          color: AppTheme.darkBg,
+          child: Center(
+            child: controller.currentPage,
           ),
-          bottomNavigationBar:
-              controller.isNavBarEnabled.value ? _buildBottomNavBar() : null,
-          drawer: Drawer(
-            child: Text('Hello'),
-          ),
-        );
-      },
+        ),
+        bottomNavigationBar: controller.isNavBarEnabled.value
+            ? _buildBottomNavigationBar()
+            : null,
+        drawer: CustomDrawer(),
+      ),
     );
   }
 
@@ -39,7 +37,7 @@ class Layout extends GetView<LayoutController> {
     );
   }
 
-  BottomNavigationBar _buildBottomNavBar() {
+  BottomNavigationBar _buildBottomNavigationBar() {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       currentIndex: controller.currentIndex.value,
@@ -56,7 +54,7 @@ class Layout extends GetView<LayoutController> {
       items: [
         BottomNavigationBarItem(
           label: 'Dashboard',
-          icon: Icon(Icons.dashboard_outlined),
+          icon: Icon(Icons.dashboard),
         ),
         BottomNavigationBarItem(
           label: 'Workout',

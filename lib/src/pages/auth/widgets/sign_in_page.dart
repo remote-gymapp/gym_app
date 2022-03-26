@@ -101,7 +101,7 @@ class SignInPage extends GetView {
                 ),
               ),
               onPressed: () {
-                Get.offAllNamed(ScreenRoute.demoMain);
+                Get.offAllNamed(ScreenRoute.main);
               },
             ),
           )
