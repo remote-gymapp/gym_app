@@ -1,77 +1,59 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:gym_app/src/theme/app_theme.dart';
+import 'package:gym_app/src/controllers/layout_controller.dart';
 
-class Layout extends StatefulWidget {
-  final Widget child;
-  final bool isAppBarEnabled;
-  final bool isNavBarEnabled;
-
-  String appBarTitle = 'Gym App';
-
-  Layout({
-    Key? key,
-    required this.child,
-    required this.isAppBarEnabled,
-    required this.isNavBarEnabled,
-  }) : super(key: key);
-
+class Layout extends GetView<LayoutController> {
   @override
-  State<Layout> createState() => _LayoutState();
-}
+  final LayoutController controller = Get.put(LayoutController());
 
-class _LayoutState extends State<Layout> {
-  int _currentIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    Timer.periodic(Duration(milliseconds: 500), (_) {
-      setState(() {
-        widget.appBarTitle += "a";
-      });
-    });
-  }
+  Layout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: widget.isAppBarEnabled ? _buildAppBar() : null,
-      body: Container(
-        color: AppTheme.darkBg,
-        child: Center(child: widget.child),
-      ),
-      bottomNavigationBar: _buildBottomNavBar(),
+    return Obx(
+      () {
+        return Scaffold(
+          appBar: controller.isAppBarEnabled.value ? _buildAppBar() : null,
+          body: Container(
+            color: AppTheme.darkBg,
+            child: Center(
+              child: controller.currentPage,
+            ),
+          ),
+          bottomNavigationBar:
+              controller.isNavBarEnabled.value ? _buildBottomNavBar() : null,
+        );
+      },
     );
   }
 
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: AppTheme.sidenav,
-      title: Text(widget.appBarTitle),
+      title: Text(controller.appBarTitle.value),
     );
   }
 
   BottomNavigationBar _buildBottomNavBar() {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      currentIndex: _currentIndex,
-      onTap: (tappedIndex) => {
-        setState(() {
-          _currentIndex = tappedIndex;
-        })
-      },
+      currentIndex: controller.currentIndex.value,
       showSelectedLabels: true,
       showUnselectedLabels: true,
       backgroundColor: AppTheme.sidenav,
       selectedItemColor: AppTheme.primaryCoach,
       unselectedItemColor: Colors.grey,
+      selectedFontSize: 12,
+      unselectedFontSize: 12,
+      onTap: (tappedIndex) {
+        controller.updateCurrentIndex(tappedIndex);
+      },
       items: [
         BottomNavigationBarItem(
           label: 'Dashboard',
-          icon: Icon(Icons.dashboard),
+          icon: Icon(Icons.dashboard_outlined),
         ),
         BottomNavigationBarItem(
           label: 'Workout',

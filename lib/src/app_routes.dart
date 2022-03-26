@@ -13,11 +13,7 @@ class AppRoute {
     ),
     GetPage(
       name: ScreenRoute.demoMain,
-      page: () => Layout(
-        child: Text('Hello World!'),
-        isAppBarEnabled: true,
-        isNavBarEnabled: true,
-      ),
+      page: () => Layout(),
     ),
   ];
 }
