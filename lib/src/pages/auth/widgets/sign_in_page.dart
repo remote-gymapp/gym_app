@@ -68,7 +68,6 @@ class SignInPage extends GetView {
                     color: AppTheme.primaryText,
                   ),
                   labelText: 'E-mail',
-                  isPasswordField: false,
                 ),
                 SizedBox(
                   height: 15,
