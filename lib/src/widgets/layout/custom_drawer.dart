@@ -8,7 +8,9 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Text('Hello'),
+      child: SafeArea(
+        child: Text('Hello'),
+      ),
     );
   }
 }
