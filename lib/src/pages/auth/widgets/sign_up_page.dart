@@ -103,7 +103,7 @@ class SignUpPage extends GetView {
                       activeColor: Colors.white,
                     ),
                     Text(
-                      'I agree all terms and conditions',
+                      'I agree to all terms and conditions',
                       style: TextStyle(
                         color: Colors.white,
                       ),
