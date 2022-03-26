@@ -7,7 +7,6 @@ import 'package:gym_app/src/pages/screen_route.dart';
 import 'package:gym_app/src/theme/app_theme.dart';
 
 class SignUpPage extends GetView {
-  final Color backgroundColor = Color(0Xff0C1727);
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   SignUpPage({Key? key}) : super(key: key);
@@ -62,7 +61,6 @@ class SignUpPage extends GetView {
           'Member Sign Up',
           style: TextStyle(
             fontSize: 25.0,
-            color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -70,42 +68,45 @@ class SignUpPage extends GetView {
     );
   }
 
-  Column _buildFormArea() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Text('Fill in form information in the fields below'),
-        CustomTextFormField(
-          prefixIcon: Icon(
-            Icons.person,
-            color: Colors.white,
-          ),
-          labelText: 'Name',
-        ),
-        CustomTextFormField(
-          prefixIcon: Icon(
-            Icons.alternate_email,
-            color: Colors.white,
-          ),
-          labelText: 'E-mail',
-        ),
-        CustomTextFormField(
-          prefixIcon: Icon(
-            Icons.vpn_key_sharp,
-            color: Colors.white,
-          ),
-          labelText: 'Password',
-          isPasswordField: true,
-          suffixIcon: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.visibility,
-              color: Colors.white,
+  Form _buildFormArea() {
+    return Form(
+      key: _formKey,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Text('Fill in form information in the fields below'),
+          CustomTextFormField(
+            prefixIcon: Icon(
+              Icons.person,
+              color: AppTheme.themeData.iconTheme.color,
             ),
-            splashRadius: 1,
+            labelText: 'Name',
           ),
-        ),
-      ],
+          CustomTextFormField(
+            prefixIcon: Icon(
+              Icons.alternate_email,
+              color: AppTheme.themeData.iconTheme.color,
+            ),
+            labelText: 'E-mail',
+          ),
+          CustomTextFormField(
+            prefixIcon: Icon(
+              Icons.vpn_key_sharp,
+              color: AppTheme.themeData.iconTheme.color,
+            ),
+            labelText: 'Password',
+            isPasswordField: true,
+            suffixIcon: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.visibility,
+                color: AppTheme.themeData.iconTheme.color,
+              ),
+              splashRadius: 1,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -116,13 +117,10 @@ class SignUpPage extends GetView {
         Checkbox(
           value: true,
           onChanged: (value) {},
-          activeColor: Colors.white,
+          activeColor: AppTheme.themeData.iconTheme.color,
         ),
         Text(
           'I agree to all terms and conditions',
-          style: TextStyle(
-            color: Colors.white,
-          ),
         ),
       ],
     );
@@ -148,7 +146,7 @@ class SignUpPage extends GetView {
       child: Text(
         'I already have an account',
         style: TextStyle(
-          color: Color(0XFF8D8D8D),
+          color: AppTheme.secondaryTextColor,
           fontSize: 16,
           decoration: TextDecoration.underline,
         ),

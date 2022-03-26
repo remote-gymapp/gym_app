@@ -8,6 +8,7 @@ class AppTheme {
   static Color sidenav = const Color(0xff10101c);
   static Color darkBg = const Color(0xff0c1727);
   static Color lightBg = const Color(0xff1c2939);
+  static Color secondaryTextColor = const Color(0XFF8D8D8D);
 
   static ThemeData themeData = ThemeData(
     iconTheme: IconThemeData(color: Colors.blue, opacity: 1),
