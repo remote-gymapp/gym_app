@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 
 import 'package:gym_app/src/pages/auth/widgets/common/custom_button_widget.dart';
 import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_widget.dart';
+import 'package:gym_app/src/theme/app_theme.dart';
 
 class SignInPage extends GetView {
-  final Color backgroundColor = Color(0Xff0C1727);
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   SignInPage({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class SignInPage extends GetView {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: backgroundColor,
+        backgroundColor: AppTheme.darkBg,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -42,7 +42,6 @@ class SignInPage extends GetView {
           'Member Login',
           style: TextStyle(
             fontSize: 25.0,
-            color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -64,7 +63,7 @@ class SignInPage extends GetView {
                 CustomTextFormField(
                   prefixIcon: Icon(
                     Icons.alternate_email,
-                    color: Colors.white,
+                    color: AppTheme.primaryText,
                   ),
                   labelText: 'E-mail',
                   isPasswordField: false,
@@ -75,7 +74,7 @@ class SignInPage extends GetView {
                 CustomTextFormField(
                   prefixIcon: Icon(
                     Icons.vpn_key_sharp,
-                    color: Colors.white,
+                    color: AppTheme.primaryText,
                   ),
                   labelText: 'Password',
                   isPasswordField: true,
@@ -83,7 +82,7 @@ class SignInPage extends GetView {
                     onPressed: () {},
                     icon: Icon(
                       Icons.visibility,
-                      color: Colors.white,
+                      color: AppTheme.primaryText,
                     ),
                     splashRadius: 1,
                   ),
@@ -119,7 +118,7 @@ class SignInPage extends GetView {
           child: Text(
             'Sign Up',
             style: TextStyle(
-              color: Color(0XFF3772FF),
+              color: AppTheme.primaryMember,
               fontSize: 23,
             ),
           ),
@@ -127,7 +126,6 @@ class SignInPage extends GetView {
         Text(
           'for a new account',
           style: TextStyle(
-            color: Color(0XFFFFFFFF),
             fontSize: 20.0,
           ),
         ),

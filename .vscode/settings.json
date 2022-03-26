@@ -8,5 +8,9 @@
 
     "files.watcherExclude": {
         "**/.fvm": true,
-    }
+    },
+    "cSpell.words": [
+        "sidenav",
+        "vsync"
+    ]
 }

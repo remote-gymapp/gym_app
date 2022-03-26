@@ -37,8 +37,6 @@ class _FadingLoadingTextState extends State<FadingLoadingText>
       child: const Text(
         'Loading',
         style: TextStyle(
-          // TODO: change this to TextPrimary when theme is defined
-          color: Colors.white,
           fontSize: 30,
         ),
       ),

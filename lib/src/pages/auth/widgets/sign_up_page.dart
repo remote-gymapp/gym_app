@@ -131,23 +131,16 @@ class SignUpPage extends GetView {
   }
 
   Widget _buildSignUpTextNavigationArea() {
-    return Wrap(
-      direction: Axis.vertical,
-      alignment: WrapAlignment.center,
-      crossAxisAlignment: WrapCrossAlignment.center,
-      children: [
-        TextButton(
-          onPressed: () {},
-          child: Text(
-            'I already have an account',
-            style: TextStyle(
-              color: Color(0XFF8D8D8D),
-              fontSize: 16,
-              decoration: TextDecoration.underline,
-            ),
-          ),
+    return TextButton(
+      onPressed: () {},
+      child: Text(
+        'I already have an account',
+        style: TextStyle(
+          color: Color(0XFF8D8D8D),
+          fontSize: 16,
+          decoration: TextDecoration.underline,
         ),
-      ],
+      ),
     );
   }
 }
