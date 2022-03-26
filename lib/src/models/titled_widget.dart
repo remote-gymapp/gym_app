@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 abstract class TitledWidget extends StatelessWidget {
-  final String title = 'Gym App';
+  final Widget? title = null;
 
   const TitledWidget({Key? key}) : super(key: key);
 }

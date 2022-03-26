@@ -4,15 +4,26 @@ import 'package:get/get.dart';
 import 'package:gym_app/src/models/titled_widget.dart';
 
 class DietPage extends GetView implements TitledWidget {
-  const DietPage({Key? key}) : super(key: key);
-
   @override
-  final String title = 'Diet';
+  final Widget title = Row(
+    children: [
+      Icon(Icons.restaurant),
+      SizedBox(width: 10),
+      Text('Diet and Nutrition'),
+    ],
+  );
+
+  DietPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(title),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          title,
+        ],
+      ),
     );
   }
 }

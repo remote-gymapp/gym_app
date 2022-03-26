@@ -5,6 +5,9 @@ import 'package:gym_app/src/theme/app_theme.dart';
 import 'package:gym_app/src/controllers/layout_controller.dart';
 import 'package:gym_app/src/widgets/layout/custom_drawer.dart';
 
+/// Main layout component that composes an app bar, a bottom navigation bar, and
+/// a body that changes according to the chosen navigation from the bottom
+/// navigation bar.
 class Layout extends GetView<LayoutController> {
   @override
   final LayoutController controller = Get.put(LayoutController());
@@ -33,7 +36,9 @@ class Layout extends GetView<LayoutController> {
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: AppTheme.sidenav,
-      title: Text(controller.appBarTitle.value),
+      title: Center(
+        child: controller.currentPage.title,
+      ),
     );
   }
 
