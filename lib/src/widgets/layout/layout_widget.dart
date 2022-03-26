@@ -24,6 +24,9 @@ class Layout extends GetView<LayoutController> {
           ),
           bottomNavigationBar:
               controller.isNavBarEnabled.value ? _buildBottomNavBar() : null,
+          drawer: Drawer(
+            child: Text('Hello'),
+          ),
         );
       },
     );
