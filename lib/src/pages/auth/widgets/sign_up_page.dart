@@ -69,7 +69,6 @@ class SignUpPage extends GetView {
                     color: Colors.white,
                   ),
                   labelText: 'Name',
-                  isPasswordField: false,
                 ),
                 CustomTextFormField(
                   prefixIcon: Icon(
@@ -77,7 +76,6 @@ class SignUpPage extends GetView {
                     color: Colors.white,
                   ),
                   labelText: 'E-mail',
-                  isPasswordField: false,
                 ),
                 CustomTextFormField(
                   prefixIcon: Icon(

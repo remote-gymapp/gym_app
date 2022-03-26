@@ -18,7 +18,7 @@ class CustomTextFormField extends StatelessWidget {
   CustomTextFormField({
     required this.labelText,
     required this.prefixIcon,
-    required this.isPasswordField,
+    this.isPasswordField = false,
     this.suffixIcon,
     Key? key,
   }) : super(key: key);
