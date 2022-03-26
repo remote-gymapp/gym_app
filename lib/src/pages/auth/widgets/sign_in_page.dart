@@ -15,6 +15,7 @@ class SignInPage extends GetView {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppTheme.darkBg,
         body: Center(
           child: Column(
