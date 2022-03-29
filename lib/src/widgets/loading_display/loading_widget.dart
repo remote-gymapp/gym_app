@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gym_app/src/theme/app_theme.dart';
 
-import 'package:gym_app/src/widgets/loading_display/rotating_dumbbell_widget.dart';
+import 'package:gym_app/src/theme/app_theme.dart';
 import 'package:gym_app/src/widgets/loading_display/fading_loading_text_widget.dart';
+import 'package:gym_app/src/widgets/loading_display/rotating_dumbbell_widget.dart';
 
 /// Basic loading screen with a spinning dumbbell and a fading-in-and-out loading text
 ///

@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:gym_app/src/models/titled_widget.dart';
 
-import 'package:gym_app/src/pages/dashboard/widget/dashboard_page.dart';
-import 'package:gym_app/src/pages/workout/widget/workout_page.dart';
-import 'package:gym_app/src/pages/diet/widget/diet_page.dart';
+import 'package:gym_app/src/models/titled_widget.dart';
 import 'package:gym_app/src/pages/body/widget/body_page.dart';
+import 'package:gym_app/src/pages/dashboard/widget/dashboard_page.dart';
+import 'package:gym_app/src/pages/diet/widget/diet_page.dart';
+import 'package:gym_app/src/pages/workout/widget/workout_page.dart';
 
 /// Stores pages as an enum
 class Pages {
