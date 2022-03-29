@@ -18,5 +18,5 @@ jobs:
       - run: flutter --version
       - run: ls -al
       - run: flutter pub get
-      - run: flutter test
+      # - run: flutter test   # enable again once tests have been written
       - run: flutter build apk
