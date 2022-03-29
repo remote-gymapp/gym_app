@@ -1,8 +1,22 @@
 name: Flutter Build Project
-on: [push]
+on: [push, pull_request]
 jobs:
   Build-Project:
     runs-on: ubuntu-latest
     steps:
-      - name: flutter-android-sdk
-        uses: andreujuanc/flutter-android-sdk@v1.0.6
+      - name: Checkout
+        uses: actions/checkout@v3.0.0
+
+      - name: Flutter action
+        uses: subosito/flutter-action@v2.3.0
+        with:
+          flutter-version: '2.8.1'
+          channel: 'stable'
+          cache: true
+          cache-key: flutter
+          
+      - run: flutter --version
+      - run: ls -al
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter build apk
