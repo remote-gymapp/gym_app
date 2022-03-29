@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
 import 'package:gym_app/src/models/titled_widget.dart';

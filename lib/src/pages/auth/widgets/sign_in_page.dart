@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
 import 'package:gym_app/src/pages/auth/widgets/common/custom_button_widget.dart';
 import 'package:gym_app/src/pages/auth/widgets/common/custom_text_form_field_widget.dart';
 import 'package:gym_app/src/pages/screen_route.dart';
 import 'package:gym_app/src/theme/app_theme.dart';
-import 'package:gym_app/src/pages/screen_route.dart';
 
 class SignInPage extends GetView {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();

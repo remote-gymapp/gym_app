@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
-import 'package:gym_app/src/theme/app_theme.dart';
 import 'package:gym_app/src/controllers/layout_controller.dart';
+import 'package:gym_app/src/theme/app_theme.dart';
 import 'package:gym_app/src/widgets/layout/custom_drawer.dart';
 
 /// Main layout component that composes an app bar, a bottom navigation bar, and
