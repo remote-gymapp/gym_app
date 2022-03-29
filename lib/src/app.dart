@@ -16,7 +16,6 @@ class GymApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       getPages: AppRoute.appRoutes,
       home: SignInPage(),
-      getPages: AppRoute.appRoutes,
     );
   }
 }
