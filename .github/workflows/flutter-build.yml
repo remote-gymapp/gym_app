@@ -1,0 +1,8 @@
+name: Flutter Build Project
+on: [push]
+jobs:
+  Build-Project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: flutter-android-sdk
+        uses: andreujuanc/flutter-android-sdk@v1.0.6
